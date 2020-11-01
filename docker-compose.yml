@@ -12,8 +12,9 @@ services:
       POSTGRES_PASSWORD: dev
 
   web:
-    build: .
-    image: concourse/concourse:local
+  build:
+    context: ./
+    dockerfile: Dockerfile
     volumes:
     - .:/src
     command: web
@@ -34,8 +35,9 @@ services:
       CONCOURSE_ENABLE_ACROSS_STEP: "true"
 
   worker:
-    build: .
-    image: concourse/concourse:local
+    build:
+    context: ./
+    dockerfile: Dockerfile
     command: worker
     privileged: true
     depends_on: [web]

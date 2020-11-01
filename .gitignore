@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 .idea
 .vscode
@@ -14,12 +15,7 @@ docker-compose.override.yml
 *.coverprofile
 *.coverprofile.*
 *.test
+=======
+node_modules
+>>>>>>> b0fc93cb9... prod
 
-ci/deployments/*/.terraform/
-ci/deployments/*/keys/gcp.json
-ci/deployments/*/keys/id_rsa
-ci/deployments/*/keys/id_rsa.pub
-
-hack/vault/certs
-hack/vault/init.json
-worker/runtime/integration/sample/sample
